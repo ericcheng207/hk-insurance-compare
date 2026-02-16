@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Detailed comparison of insurance products from Bowtie, OneDegree, Blue, Avo, and ZA Insure. Compare VHIS, life, travel, pet, home insurance and more.">
+    <meta name="keywords" content="insurance comparison, HK insurance products, VHIS comparison, pet insurance HK, travel insurance">
+    <title>Compare Insurance Products - HK Insurance Compare</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header & Navigation -->
+    <header>
+        <div class="container">
+            <nav>
+                <div class="logo">🏥 HK Insurance Compare</div>
+                <div class="menu-toggle" id="menuToggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                <ul class="nav-links" id="navLinks">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="compare.html">Compare</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="https://github.com/ericcheng207/hk-insurance-compare" target="_blank">GitHub</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Page Header -->
+    <section class="hero" style="padding: 3rem 0;">
+        <div class="container">
+            <h1>Compare Insurance Products</h1>
+            <p>Side-by-side comparison of all products offered by Hong Kong's virtual insurers</p>
+        </div>
+    </section>
+
+    <!-- Filter Section -->
+    <section class="section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Filter by Category</h2>
+            </div>
+            <div class="filter-buttons">
+                <button class="filter-btn active" data-category="all">All Products</button>
+                <button class="filter-btn" data-category="health">Health</button>
+                <button class="filter-btn" data-category="life">Life</button>
+                <button class="filter-btn" data-category="travel">Travel</button>
+                <button class="filter-btn" data-category="pet">Pet</button>
+                <button class="filter-btn" data-category="home">Home</button>
+                <button class="filter-btn" data-category="other">Other</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Comparison Table -->
+    <section class="section" style="padding-top: 0;">
+        <div class="container">
+            <div class="table-wrapper">
+                <table id="comparisonTable">
+                    <thead>
+                        <tr>
+                            <th style="min-width: 200px;">Product Type</th>
+                            <th style="min-width: 150px;">Bowtie</th>
+                            <th style="min-width: 150px;">OneDegree</th>
+                            <th style="min-width: 150px;">Blue</th>
+                            <th style="min-width: 150px;">Avo</th>
+                            <th style="min-width: 150px;">ZA Insure</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- VHIS (Medical) -->
+                        <tr data-category="health">
+                            <td><strong>VHIS (Medical)</strong></td>
+                            <td><span class="check-mark">✔️</span></td>
+                            <td><span class="check-mark">✔️</span></td>
+                            <td><span class="check-mark">✔️</span></td>
+                            <td><span class="not-available">—</span></td>
+                            <td><span class="check-mark">✔️</span></td>
+                        </tr>
+                        <!-- Critical Illness -->
+                        <tr data-category="health">
+                            <td><strong>Critical Illness</strong></td>
+                            <td><span class="check-mark">✔️</span></td>
+                            <td><span class="check-mark">✔️</span></td>
+                            <td><span class="check-mark">✔️</span></td>
+                            <td><span class="check-mark">✔️</span></td>
+                            <td><span class="check-mark">✔️</span></td>
+                        </tr>
+                        <!-- Term Life -->
+                        <tr data-category="life">
+                            <td><strong>Term Life Insurance</strong></td>
+                            <td><span class="check-mark">✔️</span></td>
+                            <td><span class="not-available">—</span></td>
+                            <td><span class="check-mark">✔️</span></td>
+                            <td><span class="not-available">—</span></td>
+                            <td><span class="check-mark">✔️</span></td>
+                        </tr>
+                        <!-- Travel -->
+                        <tr data-category="travel">
+                            <td><strong>Travel Insurance</strong></td>
+                            <td><span class="not-available">—</span></td>
+                            <td><span class="check-mark">✔️</span></td>
+                            <td><span class="not-available">—</span></td>
+                            <td><span class="check-mark">✔️</span></td>
+                            <td><span class="not-available">—</span></td>
+                        </tr>
+                        <!-- Pet -->
+                        <tr data-category="pet">
+                            <td><strong>Pet Insurance</strong></td>
+                            <td><span class="not-available">—</span></td>
+                            <td><span class="check-mark">✔️</span></td>
+                            <td><span class="not-available">—</span></td>
+                            <td><span class="check-mark">✔️</span></td>
+                            <td><span class="not-available">—</span></td>
+                        </tr>
+                        <!-- Home -->
+                        <tr data-category="home">
+                            <td><strong>Home Insurance</strong></td>
+                            <td><span class="not-available">—</span></td>
+                            <td><span class="check-mark">✔️</span></td>
+                            <td><span class="not-available">—</span></td>
+                            <td><span class="check-mark">✔️</span></td>
+                            <td><span class="not-available">—</span></td>
+                        </tr>
+                        <!-- Accident -->
+                        <tr data-category="other">
+                            <td><strong>Accident Insurance</strong></td>
+                            <td><span class="not-available">—</span></td>
+                            <td><span class="not-available">—</span></td>
+                            <td><span class="not-available">—</span></td>
+                            <td><span class="not-available">—</span></td>
+                            <td><span class="check-mark">✔️</span></td>
+                        </tr>
+                        <!-- Savings/Endowment -->
+                        <tr data-category="life">
+                            <td><strong>Savings/Endowment Plans</strong></td>
+                            <td><span class="not-available">—</span></td>
+                            <td><span class="not-available">—</span></td>
+                            <td><span class="check-mark">✔️</span></td>
+                            <td><span class="not-available">—</span></td>
+                            <td><span class="not-available">—</span></td>
+                        </tr>
+                        <!-- Outpatient -->
+                        <tr data-category="health">
+                            <td><strong>Outpatient Coverage</strong></td>
+                            <td><span class="not-available">—</span></td>
+                            <td><span class="not-available">—</span></td>
+                            <td><span class="not-available">—</span></td>
+                            <td><span class="check-mark">✔️</span></td>
+                            <td><span class="not-available">—</span></td>
+                        </tr>
+                        <!-- Domestic Helper -->
+                        <tr data-category="other">
+                            <td><strong>Domestic Helper Insurance</strong></td>
+                            <td><span class="not-available">—</span></td>
+                            <td><span class="not-available">—</span></td>
+                            <td><span class="not-available">—</span></td>
+                            <td><span class="check-mark">✔️</span></td>
+                            <td><span class="not-available">—</span></td>
+                        </tr>
+                        <!-- E-wallet Protection -->
+                        <tr data-category="other">
+                            <td><strong>E-wallet Protection</strong></td>
+                            <td><span class="not-available">—</span></td>
+                            <td><span class="not-available">—</span></td>
+                            <td><span class="not-available">—</span></td>
+                            <td><span class="check-mark">✔️</span></td>
+                            <td><span class="not-available">—</span></td>
+                        </tr>
+                        <!-- IVF/Journey Protection -->
+                        <tr data-category="other">
+                            <td><strong>IVF/Journey Protection</strong></td>
+                            <td><span class="not-available">—</span></td>
+                            <td><span class="not-available">—</span></td>
+                            <td><span class="not-available">—</span></td>
+                            <td><span class="check-mark">✔️</span></td>
+                            <td><span class="not-available">—</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <!-- Key Highlights -->
+    <section class="section" style="background-color: var(--gray-light);">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Key Highlights by Insurer</h2>
+            </div>
+            <div class="cards-grid">
+                <!-- Bowtie Highlights -->
+                <div class="card">
+                    <div class="card-header">
+                        <h3 class="card-title" style="color: #0066cc;">Bowtie</h3>
+                    </div>
+                    <div class="card-content">
+                        <p><strong>Best For:</strong> VHIS and medical insurance seekers</p>
+                        <p><strong>Key Strengths:</strong></p>
+                        <ul>
+                            <li>Market leader in online engagement</li>
+                            <li>AI-driven underwriting</li>
+                            <li>Price transparency</li>
+                            <li>No agent commissions</li>
+                        </ul>
+                        <p><strong>Product Focus:</strong> Health insurance (VHIS), Critical Illness, Term Life</p>
+                    </div>
+                    <div class="card-footer">
+                        <a href="https://www.bowtie.com.hk" target="_blank" class="btn btn-outline">Visit Bowtie</a>
+                    </div>
+                </div>
+
+                <!-- OneDegree Highlights -->
+                <div class="card">
+                    <div class="card-header">
+                        <h3 class="card-title" style="color: #00a896;">OneDegree</h3>
+                    </div>
+                    <div class="card-content">
+                        <p><strong>Best For:</strong> Pet, Home, and Travel insurance</p>
+                        <p><strong>Key Strengths:</strong></p>
+                        <ul>
+                            <li>Pet insurance pioneer in HK</li>
+                            <li>AI-powered claims processing</li>
+                            <li>Strong Facebook marketing</li>
+                            <li>80%+ improvement in cost/income ratio</li>
+                        </ul>
+                        <p><strong>Product Focus:</strong> Pet, Home, Travel, Medical/VHIS</p>
+                    </div>
+                    <div class="card-footer">
+                        <a href="https://www.onedegree.hk" target="_blank" class="btn btn-outline">Visit OneDegree</a>
+                    </div>
+                </div>
+
+                <!-- Blue Highlights -->
+                <div class="card">
+                    <div class="card-header">
+                        <h3 class="card-title" style="color: #0066cc;">Blue</h3>
+                    </div>
+                    <div class="card-content">
+                        <p><strong>Best For:</strong> Comprehensive life insurance products</p>
+                        <p><strong>Key Strengths:</strong></p>
+                        <ul>
+                            <li>Broad product range</li>
+                            <li>Gamified campaigns</li>
+                            <li>Commission-free</li>
+                            <li>24/7 online service</li>
+                        </ul>
+                        <p><strong>Product Focus:</strong> VHIS, Life, Critical Illness, Savings/Endowment</p>
+                    </div>
+                    <div class="card-footer">
+                        <a href="https://www.blue.com.hk" target="_blank" class="btn btn-outline">Visit Blue</a>
+                    </div>
+                </div>
+
+                <!-- Avo Highlights -->
+                <div class="card">
+                    <div class="card-header">
+                        <h3 class="card-title" style="color: #00a896;">Avo Insurance</h3>
+                    </div>
+                    <div class="card-content">
+                        <p><strong>Best For:</strong> Lifestyle and specialty insurance</p>
+                        <p><strong>Key Strengths:</strong></p>
+                        <ul>
+                            <li>Affordable pricing</li>
+                            <li>Low-friction interface</li>
+                            <li>Unique specialty products (E-wallet, IVF)</li>
+                            <li>Domestic helper coverage</li>
+                        </ul>
+                        <p><strong>Product Focus:</strong> Outpatient, Travel, Pet, Home, Domestic Helper, Specialty</p>
+                    </div>
+                    <div class="card-footer">
+                        <a href="https://www.heyavo.com" target="_blank" class="btn btn-outline">Visit Avo</a>
+                    </div>
+                </div>
+
+                <!-- ZA Insure Highlights -->
+                <div class="card">
+                    <div class="card-header">
+                        <h3 class="card-title" style="color: #0066cc;">ZA Insure</h3>
+                    </div>
+                    <div class="card-content">
+                        <p><strong>Best For:</strong> Basic digital health and life insurance</p>
+                        <p><strong>Key Strengths:</strong></p>
+                        <ul>
+                            <li>Fully digital</li>
+                            <li>No medical exams for most plans</li>
+                            <li>Straightforward coverage</li>
+                            <li>Life protection up to HKD 10M</li>
+                        </ul>
+                        <p><strong>Product Focus:</strong> VHIS, Cancer/Heart/Stroke, Life Protection, Accident</p>
+                    </div>
+                    <div class="card-footer">
+                        <a href="https://insure.za.group" target="_blank" class="btn btn-outline">Visit ZA Insure</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Disclaimer -->
+    <section class="section">
+        <div class="container">
+            <div class="disclaimer">
+                <p class="disclaimer-title">⚠️ Important Disclaimer</p>
+                <p>This comparison is for informational purposes only and does not constitute financial or insurance advice. 
+                   Product availability, features, and pricing are subject to change. Please visit each insurer's official 
+                   website for the most current and detailed information. All listed insurers are regulated by the Hong Kong 
+                   Insurance Authority.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>About</h3>
+                    <p>HK Insurance Compare is an independent comparison platform for Hong Kong's digital insurance products. We help you make informed decisions.</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="compare.html">Compare Products</a></li>
+                        <li><a href="about.html">About & FAQ</a></li>
+                        <li><a href="https://github.com/ericcheng207/hk-insurance-compare" target="_blank">GitHub Repository</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Insurers</h3>
+                    <ul>
+                        <li><a href="https://www.bowtie.com.hk" target="_blank">Bowtie</a></li>
+                        <li><a href="https://www.onedegree.hk" target="_blank">OneDegree</a></li>
+                        <li><a href="https://www.blue.com.hk" target="_blank">Blue</a></li>
+                        <li><a href="https://www.heyavo.com" target="_blank">Avo Insurance</a></li>
+                        <li><a href="https://insure.za.group" target="_blank">ZA Insure</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p><strong>Disclaimer:</strong> This is an informational comparison site and does not provide financial advice. 
+                   All insurers listed are regulated by the Hong Kong Insurance Authority. Please visit official websites for the most current information.</p>
+                <p style="margin-top: 1rem;">Last Updated: February 2026 | 
+                   <a href="https://github.com/ericcheng207/hk-insurance-compare" target="_blank">View on GitHub</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
